@@ -22,9 +22,9 @@ namespace ProductsApp.Controllers
         /// 
         /// </summary>
         /// <returns></returns>
-        public JsonResult<Product[]> GetAllProducts()
+        public Product[] GetAllProducts()
         {
-            return Json(products);
+            return products;
         }
 
         /// <summary>
@@ -39,7 +39,7 @@ namespace ProductsApp.Controllers
             {
                 return NotFound();
             }
-            return Json(product);
+            return Ok(product);
         }
     }
 }
